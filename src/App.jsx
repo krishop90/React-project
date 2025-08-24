@@ -1,7 +1,27 @@
+import QuoteBook1 from "./components/QuoteBook1";
+import QuoteBox2 from "./components/QuoteBox2";
+
+
+const quote1 = {
+    "quote": "Be yourself; everyone else is already taken.",
+    "author": "Oscar Wilde",
+    "bio": "Oscar Wilde (1854–1900) was an Irish poet"
+}
+
+const quote2 = {
+    "quote": "In the middle of every difficulty lies opportunity.",
+    "author": "Albert Einstein",
+    "bio": "Albert Einstein (1879–1955) was a theoretical physicist, widely regarded as one of the greatest minds in science, best known for his theory of relativity."
+  }
+
+
 function App() {
   return (
-    <div>
+    <div className="flex flex-row gap-10">
+      <QuoteBook1 quote = {quote1}/>
       
+      <QuoteBox2 quote = {quote2}/>
+
     </div>
   );
 }
