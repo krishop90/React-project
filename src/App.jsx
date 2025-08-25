@@ -1,16 +1,12 @@
-
 function App() {
   return (
     <div>
-      
+
     </div>
   );
 }
 
 export default App;
-
-
-
 
 /**********************************************     PROPS    ******************************************************************* */
 // const Message = (props) => {
@@ -103,7 +99,7 @@ export default App;
 
 
 
-//****************************  Tailwind  Padding Margin  ******************************************************** */
+//****************************  Tailwind  Padding Margin  ************************************************************************************************* */
 
 
 // Padding is used to create space inside an element, between the content and the border.
@@ -145,7 +141,7 @@ export default App;
 
 // export default App;
 
-/********************************** FLEX BOX ********************************************************** */
+/************************************************** FLEX BOX ************************************************************************************** */
 
 // function App() {
 //   return (
@@ -218,6 +214,143 @@ export default App;
 //   return (
 //     <div className="flex flex-col h-screen items-center justify-center">
 //       <State />
+//     </div>
+//   );
+// }
+
+// export default App;
+
+
+
+/********************************************Conditional Rendering**************************************************************************************** */
+
+
+// import Widget1 from "./components/Widget1";
+// import Widget2 from "./components/Widget2";
+// import Widget3 from "./components/Widget3";
+
+// function App() {
+//   return (
+//     <div className="justify-center flex h-screen items-center">
+//       <Widget1 />
+//       <Widget2 />
+//       <Widget3 />
+//     </div>
+//   );
+// }
+
+// export default App;
+
+
+/*************************************************CONDITIONAL RENDERING COUNTER PROGRAM********************************************************************************************* */
+// import Counter from "./components/Counter";
+
+
+// function App() {
+//   return (
+//     <div className="justify-center flex h-screen items-center">
+//       <Counter />
+//     </div>
+//   );
+// }
+
+// export default App;
+
+
+/************************************************************Switch Button conditional rendering using******************************************************************************** */
+// import Switch from "./components/Switch";
+
+
+// function App() {
+//   return (
+//     <div className="justify-center flex h-screen items-center">
+//       <Switch />
+//     </div>
+//   );
+// }
+
+// export default App;
+
+
+/***************************************** IMAGE CAROUSEL **************************************************************************************************************************** */
+// import { useState } from "react";
+
+// const IMAGE_URL = [
+//   "https://images.unsplash.com/photo-1525253086316-d0c936c814f8", 
+//   "https://images.unsplash.com/photo-1507149833265-60c372daea22",
+//   "https://images.unsplash.com/photo-1517849845537-4d257902454a",
+//   "https://images.unsplash.com/photo-1507149833265-60c372daea22?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZG9nfGVufDB8fDB8fA%3D%3D",
+//   "https://images.unsplash.com/photo-1558788353-f76d92427f16"
+// ];
+
+// function App() {
+//   const [imgIndx, setImgIndx] = useState(0);
+
+//   const prevImage = () => {
+//     setImgIndx((prev) => (prev === 0 ? IMAGE_URL.length - 1 : prev - 1));
+//   };
+
+//   const nextImage = () => {
+//     setImgIndx((prev) => (prev === IMAGE_URL.length - 1 ? 0 : prev + 1));
+//   };
+
+//   return (
+//     <div className="flex items-center justify-center h-screen bg-gray-100">
+//       <button 
+//         className="mr-9 bg-teal-400 p-3 rounded-full hover:bg-teal-500 transition"
+//         onClick={prevImage}
+//       >
+//         <i className="fa-solid fa-less-than font-bold" />
+//       </button>
+
+//       <div className="relative flex justify-center">
+//         <img
+//           src={IMAGE_URL[imgIndx]}
+//           alt="Cute Dog"
+//           className="rounded-2xl shadow-lg w-[500px] h-[350px] object-cover"
+//         />
+//         <div className="absolute bottom-3 bg-black/50 text-white px-4 py-1 rounded-lg text-xl font-semibold">
+//           Dog {imgIndx + 1}
+//         </div>
+//       </div>
+
+//       <button 
+//         className="ml-9 bg-teal-400 p-3 rounded-full hover:bg-teal-500 transition"
+//         onClick={nextImage}
+//       >
+//         <i className="fa-solid fa-greater-than" />
+//       </button>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+
+/**************************************IMAGE CAROUSEL WITH CONDITIONAL RENDERING************************************************************************************************************************** */
+// import { useState } from "react";
+// import CatCard from "./components/CatCard";
+// import NavButton from "./components/NavButton";
+// import CATS from "./data/cats";
+
+// function App() {
+//   const [catIndex, setCatIndex] = useState(3);
+//   return (
+//     <div className="flex items-center justify-center h-screen bg-gray-100">
+//       <NavButton 
+//         icon="fa-caret-left"
+//         show = {catIndex > 0}
+//         onClick={() => setCatIndex(catIndex - 1)}
+//       />
+      
+//       <CatCard cats={CATS[catIndex]} />
+      
+//       <NavButton 
+//           icon="fa-caret-right"
+//           show={catIndex < CATS.length - 1}
+//           onClick={() => setCatIndex(catIndex + 1)}
+//       />
+
 //     </div>
 //   );
 // }
